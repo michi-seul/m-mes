@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mèmes</title>
+    <link rel="stylesheet" href="memes.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Mème Créateur<span class="dot">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="tab-button" data-tab="home">Accueil</a></li>
+                <li><a href="#meme-generator" class="tab-button" data-tab="meme-generator">Créer un Mème</a></li>
+                <li><a href="#gallery" class="tab-button" data-tab="gallery">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="tab active">
+        <div class="hero">
+            <h2>Créez vos propres mèmes facilement</h2>
+            <p>Ajoutez du texte à vos images et partagez-les instantanément !</p>
+            <button id="goToMemeTab" class="btn-primary">Commencer</button>
+        </div>
+    </section>
+    
+    <section id="meme-generator" class="tab">
+        <h2>Créer un Mème</h2>
+        <div class="controls">
+            <input type="file" id="imageUpload" accept="image/*">
+            <input type="range" id="imageSize" min="0.1" max="2" step="0.1" value="0.5">
+            <label for="imageSize">Taille de l'image</label>
+
+            <input type="text" id="topText" placeholder="Texte en haut">
+            <input type="text" id="bottomText" placeholder="Texte en bas">
+            <input type="range" id="fontSize" min="10" max="60" value="30">
+            <label for="fontSize">Taille du texte</label>
+
+            <button id="generateMeme" class="btn-secondary">Générer</button>
+        </div>
+        <div class="meme-preview">
+            <canvas id="memeCanvas"></canvas>
+        </div>
+        <div class="buttons">
+            <button id="downloadMeme" class="btn-primary">Télécharger</button>
+            <button id="saveMeme" class="btn-secondary">Enregistrer</button>
+        </div>
+    </section>
+    
+    <section id="gallery" class="tab">
+        <h2>Galerie des Mèmes</h2>
+        <div class="gallery"></div>
+    </section>
+
+    <script src="memes.js"></script>
+</body>
+</html>

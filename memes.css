@@ -1,0 +1,142 @@
+/* Styles généraux */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f2;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.logo .dot {
+  color: #ff5ea6;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('background.jpg') no-repeat center center/cover;
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background: #222;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: #ff5ea6;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.meme-preview {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#memeCanvas {
+  max-width: 100%;
+  border: 2px solid #ff5ea6;
+  border-radius: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.controls input[type="range"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.controls label {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Styles des onglets */
+.tab {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab.active {
+  display: block;
+  opacity: 1;
+}
+
+.tab-button {
+  cursor: pointer;
+}
